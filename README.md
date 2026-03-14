@@ -47,18 +47,24 @@ Stacks are auto-discovered from `standards/` subdirectories — adding a new sta
 
 ## Installation
 
-### Claude Code — Install via Marketplace
+### Claude Code — Install via Plugin Marketplace
 
-The fastest way for Claude Code users. Run this in your project directory:
+The fastest way for Claude Code users. First, add this repo as a marketplace:
 
 ```bash
-claude install wso2/engineering-governance
+/plugin marketplace add wso2/engineering-governance
+```
+
+Then install the plugin:
+
+```bash
+/plugin install wso2-engineering-governance@wso2-engineering
 ```
 
 This installs all skills as slash commands (e.g., `/se-security-review`, `/se-change-impact`). To also install rules and deny patterns, run `setup.sh` after:
 
 ```bash
-cd ~/.claude/plugins/wso2-engineering-governance
+cd ~/.claude/plugins/cache/wso2-engineering-governance
 ./setup.sh --tool claude --stack engineering,java --repo ~/projects/product-is
 ```
 

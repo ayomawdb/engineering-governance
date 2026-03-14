@@ -1,5 +1,11 @@
 {
   "name": "wso2-engineering-governance",
   "version": "1.0.0",
-  "description": "WSO2 engineering standards, secure coding skills, and SRE safety tools"
+  "description": "WSO2 engineering standards, secure coding skills, and SRE safety tools",
+  "author": {
+    "name": "WSO2"
+  },
+  "repository": "https://github.com/wso2/engineering-governance",
+  "license": "Apache-2.0",
+  "skills": "./skills/"
 }
