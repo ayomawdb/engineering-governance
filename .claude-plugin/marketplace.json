@@ -1,0 +1,16 @@
+{
+  "name": "wso2-engineering",
+  "owner": {
+    "name": "WSO2"
+  },
+  "plugins": [
+    {
+      "name": "wso2-engineering-governance",
+      "source": {
+        "source": "github",
+        "repo": "wso2/engineering-governance"
+      },
+      "description": "WSO2 engineering standards, secure coding skills, and SRE safety tools. Includes se-security-review, se-change-impact, se-tenant-check, sre-deploy-readiness, and gov-update-product-reference."
+    }
+  ]
+}

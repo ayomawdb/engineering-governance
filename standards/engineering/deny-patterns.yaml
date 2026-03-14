@@ -1,0 +1,37 @@
+# Deny Patterns — Engineering (Common)
+#
+# Hard blocks on dangerous operations. These fire BEFORE the agent can act.
+# Translate to your agent's native format:
+#   - Claude Code: setup.sh converts to ~/.claude/settings.json automatically
+#   - Cursor: Add to .cursorignore or Cursor settings
+#   - Other tools: Consult your tool's documentation
+#
+# Categories: file-read (block reading sensitive files), command (block dangerous commands)
+#
+# NOTE: env/printenv are covered in security-baseline rules (soft guidance)
+# rather than here, because `env VAR=x cmd` is a legitimate use of `env`.
+
+file-read:
+  # Environment / secret files
+  - ".env"
+  - "**/.env"
+  - ".env.local"
+  - ".env.production"
+  - "**/.env.local"
+  - "**/.env.production"
+  # Credential files
+  - "~/.aws/credentials"
+  - "~/.ssh/id_rsa"
+  - "~/.ssh/id_ed25519"
+  - "~/.kube/config"
+  - "~/.vault-token"
+  - "~/.docker/config.json"
+  - "~/.npmrc"
+  # Key and state files
+  - "**/*.pem"
+  - "**/*.key"
+  - "**/*.tfstate"
+
+command:
+  - "rm -rf /"
+  - "rm -rf /*"
