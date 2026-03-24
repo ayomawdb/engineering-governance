@@ -751,7 +751,7 @@ install_skills_copilot() {
     description=$(grep '^description:' "$skill_file" | head -1 | sed 's/^description: //')
     {
       echo "---"
-      echo "mode: 'agent'"
+      echo "agent: 'agent'"
       echo "description: '$description'"
       echo "---"
       echo ""
